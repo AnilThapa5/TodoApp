@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/text_priority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Task"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:maxLines="5"
+            android:layout_toStartOf="@id/text_priority"
+            android:layout_alignParentStart="true"
+            android:ellipsize="end"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox
+            android:id="@+id/text_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/text_title"
+            android:text="Completed"
+            android:clickable="false"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/taskUpdatedAt"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_complete"
+            android:textColor="@android:color/primary_text_light"
+            android:text="Created on: 22/12/2222"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
