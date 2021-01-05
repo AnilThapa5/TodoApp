@@ -9,13 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyToDoApp">
+        <activity
+            android:name=".Calender"
+            android:label="@string/title_activity_calender" />
 
-        <activity android:name=".LoginActivity" />
+
         <activity
-            android:name="com.example.mytodoappanil.AddEditTaskActivity"
-            android:parentActivityName="com.example.mytodoappanil.TaskActivity" />
+            android:name=".AddEditTaskActivity"
+            android:parentActivityName=".TaskActivity" />
         <activity
-            android:name="com.example.mytodoappanil.TaskActivity"
+            android:name=".TaskActivity"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

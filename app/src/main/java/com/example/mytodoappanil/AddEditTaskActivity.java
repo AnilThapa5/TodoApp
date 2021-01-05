@@ -3,11 +3,14 @@ package com.example.mytodoappanil;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.NumberPicker;
@@ -28,6 +31,7 @@ public class AddEditTaskActivity extends AppCompatActivity {
 
     private NumberPicker numberPickerPriority;
     private CheckBox isComplete;
+    private Button btncal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +44,15 @@ public class AddEditTaskActivity extends AppCompatActivity {
         numberPickerPriority = findViewById(R.id.priority_number_pick);
         numberPickerPriority.setMinValue(1);
         numberPickerPriority.setMaxValue(3);
+        btncal=findViewById(R.id.btn_cal);
 
+        btncal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddEditTaskActivity.this,Calender.class);
+                startActivity(intent);
+            }
+        });
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_close);
 
         Intent intent = getIntent();
@@ -93,4 +105,7 @@ public class AddEditTaskActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
+
 }

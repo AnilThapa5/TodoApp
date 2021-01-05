@@ -91,7 +91,7 @@ public class TaskAdapter extends ListAdapter<Task, TaskAdapter.TaskHolder> {
                     Intent shareIntent = new Intent(Intent.ACTION_SEND);
                     shareIntent.setType("text/plain");
                     final Task ShareTask = getItem(getAdapterPosition());
-                   String title =  String.valueOf(ShareTask.getTitle());
+                    String title = String.valueOf(ShareTask.getTitle());
                     String shareBody = title;
                     shareIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
                     shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
